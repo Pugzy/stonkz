@@ -9,7 +9,11 @@
 </head>
 <body>
     <h1>Stonkz</h1>
-    <small>Last Updated: {{ now()->format('Y-m-d H:i:s') }}, Created by <a href="https://github.com/Pugzy">Pugzy</a></small>
+    <p>
+        Last Updated: <strong><span>{{ now()->format('H:i:s Y-m-d') }}</span></strong>.<br />
+        A self hosted version of Minikloon <a href="https://stonks.gg/">stonks.gg</a>.<br />
+        Created by <a href="https://github.com/Pugzy">Pugzy</a> source code @ <a href="https://github.com/Pugzy/stonkz">Pugzy/stonkz</a>
+    </p>
     <ul>
         @foreach($items as $item)
             <li>
