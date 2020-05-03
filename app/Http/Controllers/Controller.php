@@ -39,7 +39,7 @@ class Controller extends BaseController
             $sellPrice = $firsBuy ? $firsBuy['pricePerUnit'] : 0;
             $buyPrice = $firstSell ? $firstSell['pricePerUnit'] : 0;
 
-            $item['percentage_raw'] = ($sellPrice - $buyPrice) * (100 / $buyPrice);
+            $item['percentage_raw'] = ($sellPrice == 0 || $buyPrice == 0) ? 0 : ($sellPrice - $buyPrice) * (100 / $buyPrice);
             $item['percentage'] = number_format($item['percentage_raw'], 1);
 
             $item['buyPrice'] = number_format($buyPrice, 1, '.', ',');
